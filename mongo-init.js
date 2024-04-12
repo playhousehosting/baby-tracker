@@ -7,4 +7,4 @@ db.createUser({
       db: 'baby-tracker'
     }
   ]
-});
+})
