@@ -41,6 +41,6 @@ services:
       NODE_ENV: development
       DATABASE_URL: mongodb://server:test@mongo:27017/baby-tracker
     ports:
-      - 8080:8080
+      - 8084:8084
     volumes:
       - ./server:/usr/src/app
