@@ -26,7 +26,7 @@ services:
     build: client
     command: yarn start
     environment:
-      REACT_APP_SERVER: http://0.0.0.0:8080
+      REACT_APP_SERVER: http://0.0.0.0:8084
       NODE_ENV: development
       CHOKIDAR_USEPOLLING: 1
     ports:
