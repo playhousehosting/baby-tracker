@@ -8,12 +8,12 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: example
       MONGO_INITDB_DATABASE: baby-tracker
     volumes:
+      - ./mongo-data:/data/db
       - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
 
   server:
     image: mikebarkmin/baby-tracker:1.9.0
     environment:
       DATABASE_URL: mongodb://server:test@mongo:27017/baby-tracker
-
     ports:
       - 8080:8080
