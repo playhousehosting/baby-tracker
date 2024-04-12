@@ -8,7 +8,8 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: example
       MONGO_INITDB_DATABASE: baby-tracker
     volumes:
-     - ./mongo-data:/data/db
+    - ./scripts/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    - ./mongo-data:/data/db
   server:
     image: mikebarkmin/baby-tracker:1.9.0
     environment:
